@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NOVA WEAR | New Arrivals</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#0f0f0f;
+    color:white;
+}
+
+/* HEADER */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#111;
+    position:sticky;
+    top:0;
+}
+
+header a{
+    color:white;
+    text-decoration:none;
+    margin-left:15px;
+}
+
+.logo{
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+/* HERO */
+.hero{
+    text-align:center;
+    padding:60px 20px;
+    background:linear-gradient(135deg,#111,#1a1a1a);
+}
+
+.hero h1{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    opacity:0.7;
+}
+
+/* PRODUCTS */
+.products{
+    width:90%;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    padding:40px 0;
+}
+
+.card{
+    background:#1a1a1a;
+    border-radius:10px;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:100%;
+    height:280px;
+    object-fit:cover;
+}
+
+.card-content{
+    padding:15px;
+}
+
+.price{
+    color:#ff3c78;
+    margin:10px 0;
+    font-weight:bold;
+}
+
+button{
+    width:100%;
+    padding:10px;
+    background:#ff3c78;
+    border:none;
+    color:white;
+    cursor:pointer;
+    border-radius:5px;
+    font-weight:bold;
+}
+
+button:hover{
+    background:#e03167;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:20px;
+    background:#000;
+    opacity:0.7;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">NOVA WEAR</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="cart.html">Cart</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <h1>🔥 New Arrivals</h1>
+    <p>Fresh drops, limited pieces, upgraded style</p>
+</section>
+
+<section class="products">
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1520975693411-b9a8a4b8b6e0?w=600">
+        <div class="card-content">
+            <h3>Shadow Hoodie</h3>
+            <div class="price">$95</div>
+            <button onclick="addToCart('Shadow Hoodie',95,'https://images.unsplash.com/photo-1520975693411-b9a8a4b8b6e0?w=600')">
+                Add to Cart
+            </button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1520975682031-a8d1c7f3b6c2?w=600">
+        <div class="card-content">
+            <h3>Urban Drift Tee</h3>
+            <div class="price">$50</div>
+            <button onclick="addToCart('Urban Drift Tee',50,'https://images.unsplash.com/photo-1520975682031-a8d1c7f3b6c2?w=600')">
+                Add to Cart
+            </button>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1520975869011-6d3d2d2d2d2d?w=600">
+        <div class="card-content">
+            <h3>Midnight Jacket</h3>
+            <div class="price">$130</div>
+            <button onclick="addToCart('Midnight Jacket',130,'https://images.unsplash.com/photo-1520975869011-6d3d2d2d2d2d?w=600')">
+                Add to Cart
+            </button>
+        </div>
+    </div>
+
+</section>
+
+<footer>
+    © 2026 NOVA WEAR. All rights reserved.
+</footer>
+
+<!-- CART SCRIPT -->
+<script src="js/cart.js"></script>
+
+</body>
+</html>
